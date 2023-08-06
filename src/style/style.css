@@ -1,109 +1,79 @@
 :root{
-    --pink: #f14e95;
-    --bg: #0a0a0a;
-    --shadow: 0 2px 2px rgb(0  0  0 / 0.5);
+    --red: #c31010;
+    --aliceblue:aliceblue;
 }
 
-body{
-    font-size: 1.2rem;
-    font-family: 'Work Sans', sans-serif;
-    min-height: 2000vh;
-    
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
 }
 
-.hero::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    height:100%;
-    width:100%;
-    background-image: url(/src/img/prewed.jpg); 
-    background-size: cover;
-    z-index: -1;
-    filter: grayscale();
+img{
+    max-width: 100%;
 }
 
-.hero{
-    position:relative;
-    min-height: 100vh;
-    
-    
-}
-.hero h4, .hero h1, .hero p{
-    text-shadow: var(--shadow);
-}
-.hero h1{
-    font-family: 'Sacramento', cursive;
-    font-size: 6rem;
+.bg-dark{
+    background-color: #23253A !important;
 }
 
-.hero p{
-    font-size: 1.4rem;
+.btn{
+    background-color: var(--red);
+    border-color: var(--red);
+}
+.btn:hover {
+    background-color: #ff313f;
+    border-color: #ff313f;
+}
+.text-primary{
+    color:#c31010 !important;
+}
+.bg-dark-alt{
+    background-color: #2b2e41;
+}
+section{
+    padding: 5rem 0;
+}
+h1{
+    font-size: 5rem;
+}
+.navbar-brand{
+    font-size: 2rem;
 }
 
-.hero a{
-    color: var(--pink);
-    background-color: white;
-    box-shadow: var(--shadow);
-}
-.hero a:hover{
-    background-color: var(--pink);
-    color: white;
+.form-control:focus{
+    color:#23253A !important;
 }
 
+.form-control::placeholder{
+    color:#DEDEDE;
+}
 
 /* Media Query */
 
 /* Laptop */
-@media( max-width: 992px){
-    html {
-        font-size: 80%;
-    }
-
-    .simply-countdown >.simply-section{
-        padding: 70px;
+@media(max-width:992px){
+    
+    .hero{
+        font-size: 80% ;
     }
 }
 
 /* Tablet */
-@media( max-width: 768px){
-    html {
+@media screen and(max-width:768px){
+
+    header{
         font-size: 70%;
-    
     }
-    .simply-countdown >.simply-section{
-        padding: 60px;
-        margin:5px
-    }
+
 }
+
 /* Mobile Phone */
-@media(max-width: 680px) {
-    html{
-        font-size: 50%;
+@media screen and(max-width:680px){
+
+    section.header{
+        font-size: 20%;
     }
-    .simply-countdown > .simply-section{
-        padding:50px;
-        margin: 4px;
-    }
+    
 }
 
-@media(max-width: 480px){
-    html{
-        font-size: 50%;
-    }
-    .simply-countdown >.simply-section{
-        padding:40px;
-        margin: 3px;
-    }
-}
-
-@media(max-width: 280px){
-    html{
-        font-size: 37%;
-    }
-    .simply-countdown >.simply-section{
-        padding: 25px;
-        margin: 3px ;
-    }
-}
